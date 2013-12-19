@@ -42,10 +42,9 @@ var ferrandApp = (function () {
          * @returns {Array} containing the ids of the pairs to be deleted
          */
         getSelected: function () {
-            var el = _output;
             var selected = [];
 
-            $(el).children().filter(':selected').each(function () {
+            $(_output).children().filter(':selected').each(function () {
                 selected.push(parseInt(this.value, 10));
             });
 

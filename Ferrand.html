@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>seyiadebajo.com | FerrandApp</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="./css/ferrand-css.css"/>
+</head>
+<body>
+    <div id="kvWrapper" class="main-content clear-fix">
+        <div class="kv-error-notification"></div>
+
+        <div id="kvPair" class="kv-input-hold inl">
+            <label for="kvInput">Name / Value Pair</label>
+            <span>Please enter your Name / Value pair below, then click 'add' or press enter on your keyboard</span>
+            <input id="kvInput" type="text" placeholder="example: name = value"/>
+        </div>
+
+        <div id="kvPairActions" class="kv-actions inl">
+            <input id="kvAdd" type="button" value="Add to List"/>
+        </div>
+
+        <div id="kvList" class="kv-input-hold inl">
+            <label for="kvCombo">Name / Value Pair List</label>
+            <span>To delete multiple pairs at once, hold Ctrl (Windows) / Command (&#8984; Mac).</span>
+            <select name="kvCombo" id="kvCombo" size="15" multiple="multiple"></select>
+        </div>
+
+        <div id="kvListActions" class="kv-actions inl">
+            <input class="kvSort" id="kvSortName" type="button" value="Sort by Name"/>
+            <input class="kvSort" id="kvSortValue" type="button" value="Sort by Value"/>
+            <input class="kvSort" id="kvSortId" type="button" value="Sort by Id"/>
+            <input id="kvDelete" type="button" value="Delete"/>
+            <input id="kvShowXML" type="button" value="Show XML"/>
+        </div>
+        <div class="kv-input-hold">
+            <label for="kvXML">Name / Value pairs formatted as XML</label>
+            <span>You can copy the XML rendered after clicking show XML. You can also directly edit the structure before copying.</span>
+
+            <div id="kvXML" class="kv-xml" contenteditable="true"></div>
+        </div>
+    </div>
+    <span style="font-size: small"><a href="js/ferrand-js-0.1.2.js">the uncompressed js file</a> </span>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/ferrand-js-0.1.2.min.js"></script>
+    <!--<script src="js/ferrand-js-0.1.2.js"></script>-->
+</body>
+</html>

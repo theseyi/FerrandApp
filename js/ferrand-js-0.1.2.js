@@ -214,7 +214,7 @@ var ferrandApp = (function () {
              $(this).toggleClass('tmpSelected');
              });*/
 
-            console.log(JSON.stringify(_data));//TODO: Remove from PROD
+            //console.log(JSON.stringify(_data));//TODO: Remove from PROD
         },
 
         /**
@@ -275,7 +275,7 @@ var ferrandApp = (function () {
 
                 XML = XML.replace(/\[br\]/g, '<br />');
                 var XMLStr = '<pre>' + XML + '</pre>';
-                console.log(XMLStr); //TODO: Remove from PROD
+                //console.log(XMLStr); //TODO: Remove from PROD
                 $(XMLStr).appendTo(el);
                 return true;
             }

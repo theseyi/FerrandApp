@@ -10,7 +10,7 @@ module.exports = function (grunt) {
                     {
                         expand: true,
                         cwd   : '<%= src_dir %>',
-                        src   : ['*.js', '!*min.js'],
+                        src: ['*.js', '!*.min.js'],
                         dest  : '<%= src_dir %>/<%= dest_dir %>/',
                         ext   : '.js'
                     }
@@ -23,13 +23,13 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build  : {
-                src : ['<%= concat.build.files[0].dest %>*.js', '!*min.js'],
+                src: ['<%= concat.build.files[0].dest %>*.js', '!*.min.js'],
                 dest: '<%= src_dir %>/<%= dest_dir %>/<%= pkg.name %>.min.js'
             }
         },
 
         watch: {
-            files: ['<%= src_dir %>/**/*.js', '!<%= src_dir %>/**/*min.js'],
+            files: ['<%= src_dir %>/**/*.js', '!<%= src_dir %>/**/*.min.js'],
             tasks: ['concat', 'uglify']
         },
 
